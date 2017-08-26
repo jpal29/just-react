@@ -10,6 +10,7 @@ class AddNote extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    console.log(this.refs.noteTitle.value);
     fetch('http://localhost:8000/notes', {
       method: 'POST',
       headers: {
@@ -17,8 +18,8 @@ class AddNote extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        title: "cablooie",
-        text: "patooie"
+        title: this.refs.noteTitle.value,
+        text: this.refs.noteText.value
       })
     })
     .then(function(response) {
