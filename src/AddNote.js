@@ -2,39 +2,36 @@ import React, {Component} from 'react';
 
 class AddNote extends Component {
   constructor() {
-    super();
-    //this.state = {note: []};
-    this.onSubmit = this.handleSubmit.bind(this);
+    super(props);
+    this.handleTitleChange = this.handleTitleChange.bind(this);
+    this.handleSubjectChange = this.handleSubjectChange.bind(this);
+    this.state = {
+      title:'',
+      text:''
+    }
   }
 
 
-  handleSubmit(e) {
+  handleTitleChange(e) {
     e.preventDefault();
-    console.log(typeof this.refs.noteTitle.value);
-    fetch('http://localhost:8000/notes', {
-      method: 'POST',
-      headers: {
-        'Accept': 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        title: this.refs.noteTitle.value,
-        text: this.refs.noteText.value
-      })
-    })
-    .then(function(response) {
-      return response.json()
-    }).then(function(body) {
-      console.log(body);
-    });
+    this.setState({title:e.target.value});
+  }
+
+  handleSubjectChange(e) {
+    e.preventDefault();
+    this.setState({text:e.target.value});
+  }
+
+  addNote(){
+    
   }
 
 
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <input type="text" placeholder="Title" ref="noteTitle"/>
-        <input type="text" placeholder="Text" ref="noteText" />
+        <input type="text" onChange={this.handleTitleChange} placeholder="Title" ref="title"/>
+        <input type="text" onChange={this.handleSubjectChange} placeholder="Text" ref="text" />
         <input type="submit" />
       </form>
     )
