@@ -10,7 +10,7 @@ class AddNote extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log(this.refs.noteTitle.value);
+    console.log(typeof this.refs.noteTitle.value);
     fetch('http://localhost:8000/notes', {
       method: 'POST',
       headers: {
