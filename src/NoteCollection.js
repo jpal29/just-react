@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import AddNote from './AddNote.js';
 
 class NoteCollection extends Component {
   constructor(props) {
@@ -17,8 +18,9 @@ class NoteCollection extends Component {
       <div>
         <h1>Notes</h1>
         {this.state.notes.map(note =>
-          <div key={note.id}>{note.text}</div>
+          <div key={note._id}>{note.text}</div>
         )}
+        < AddNote />
       </div>
     )
   }

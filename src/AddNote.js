@@ -35,6 +35,8 @@ class AddNote extends Component {
       })
     })
     .then(function(response) {
+      console.log(response);
+      this.setState({title:'', text:''});
       return response.json()
     }).then(function(body) {
       console.log(body);
@@ -45,8 +47,8 @@ class AddNote extends Component {
   render() {
     return (
       <form onSubmit={this.addNote}>
-        <input type="text" onChange={this.handleTitleChange} placeholder="Title" ref="title"/>
-        <input type="text" onChange={this.handleSubjectChange} placeholder="Text" ref="text" />
+        <input type="text" onChange={this.handleTitleChange} className="form-control" value={this.state.title} placeholder="Title" />
+        <input type="text" onChange={this.handleSubjectChange} className="form-control" value={this.state.text} placeholder="Text"  />
         <input type="submit" />
       </form>
     )

@@ -4,7 +4,6 @@ import './App.css';
 import ToggleClock from './Toggle.js';
 import Greeting from './Greeting.js';
 import NoteCollection from './NoteCollection.js';
-import AddNote from './AddNote.js';
 
 class App extends Component {
 
@@ -14,7 +13,6 @@ class App extends Component {
         <Greeting />
         <ToggleClock />
         <NoteCollection />
-        <AddNote />
       </div>
     );
   }
