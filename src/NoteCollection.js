@@ -8,6 +8,13 @@ class NoteCollection extends Component {
   }
 
   componentDidMount() {
+    this.timerID = setInterval(
+      () => this.getNote(),
+      1000
+    );
+  }
+
+  getNote() {
     fetch('http://localhost:8000/notes')
       .then(res => res.json())
       .then(notes => this.setState({ notes }));

@@ -36,19 +36,31 @@ class AddNote extends Component {
     })
     .then(function(response) {
       console.log(response);
-      this.setState({title:'', text:''});
+      this.updateNoteState();
       return response.json()
     }).then(function(body) {
       console.log(body);
     });
+    console.log(this.state);
+  }
+
+  shouldComponentUpdate(nextProps, nextState){
+    if (this.state.title === "" && this.state.text === ""){
+      return true;
+    }
+    return false;
+  }
+
+  updateNoteState(){
+    this.setState({title:"funky", text:"way"});
   }
 
 
   render() {
     return (
       <form onSubmit={this.addNote}>
-        <input type="text" onChange={this.handleTitleChange} className="form-control" value={this.state.title} placeholder="Title" />
-        <input type="text" onChange={this.handleSubjectChange} className="form-control" value={this.state.text} placeholder="Text"  />
+        <input type="text" onChange={this.handleTitleChange}  className="form-control" placeholder="Title" />
+        <input type="text" onChange={this.handleSubjectChange} className="form-control" placeholder="Text"  />
         <input type="submit" />
       </form>
     )
