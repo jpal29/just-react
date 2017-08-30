@@ -37,6 +37,7 @@ class AddNote extends Component {
     .then(response => {
       console.log(response);
       this.setState({title:"", text:""});
+      this.props.action();
       return response.json()
     }).then(body => {
       console.log(body);
