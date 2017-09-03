@@ -19,10 +19,7 @@
 }
 
 .Article-column {
-  font-size: 15px;
-  margin: 5px;
-  background-color: orange;
-  height: 300px;
+  min-height: 400px;
 }
 
 @keyframes App-logo-spin {
