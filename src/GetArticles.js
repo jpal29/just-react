@@ -6,7 +6,8 @@ class GetArticles extends Component {
   constructor(props){
     super(props);
     this.state = {
-      articles: []
+      articles: [],
+      hovered: false
     }
   }
 
@@ -15,6 +16,8 @@ class GetArticles extends Component {
     .then(res => res.json())
     .then(articles => this.setState({articles: articles.articles}));
   }
+
+  on
 
   render() {
     return (
