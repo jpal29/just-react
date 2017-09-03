@@ -20,9 +20,14 @@ class GetArticles extends Component {
     return (
       <div>
         <h1>Articles</h1>
-        <Row className="Article-row">
+        <Row>
           {this.state.articles.map((article, index) =>
-            <Col md={3}>{article.title}</Col>
+            <a href={article.url} key={index}>
+              <Col className="Article-column" md={3}>
+                <h4>{article.title}</h4>
+                <span>{article.description}</span>
+              </Col>
+            </a>
           )}
         </Row>
       </div>

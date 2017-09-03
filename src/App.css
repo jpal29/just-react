@@ -18,9 +18,11 @@
   font-size: large;
 }
 
-.Article-row {
-  font-size: 25px;
+.Article-column {
+  font-size: 15px;
   margin: 5px;
+  background-color: orange;
+  height: 300px;
 }
 
 @keyframes App-logo-spin {
