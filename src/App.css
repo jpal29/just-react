@@ -18,6 +18,11 @@
   font-size: large;
 }
 
+.Article-row {
+  font-size: 25px;
+  margin: 5px;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

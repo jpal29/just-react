@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-
+import { Row, Col } from 'react-bootstrap';
+import './App.css';
 class GetArticles extends Component {
 
   constructor(props){
@@ -19,11 +20,11 @@ class GetArticles extends Component {
     return (
       <div>
         <h1>Articles</h1>
-        <ul>
-        {this.state.articles.map((article, index) =>
-          <div key={index}>{article.title}</div>
-        )}
-        </ul>
+        <Row className="Article-row">
+          {this.state.articles.map((article, index) =>
+            <Col md={3}>{article.title}</Col>
+          )}
+        </Row>
       </div>
     )
   }
