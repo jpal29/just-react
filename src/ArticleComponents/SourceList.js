@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Thumbnail } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 class SourceList extends Component {
@@ -11,7 +12,7 @@ class SourceList extends Component {
   }
 
   componentDidMount(){
-    fetch(' https://newsapi.org/v1/sources?country=us&category=technology')
+    fetch('https://newsapi.org/v1/sources?country=us&category=technology')
     .then(res => res.json())
     .then(sources => this.setState({sources: sources.sources}))
   }
@@ -22,14 +23,14 @@ class SourceList extends Component {
       <h1>Sources</h1>
       <Row>
         {this.state.sources.map(source =>
-          <a href={source.url} key={source.id}>
+          <Link to={`/articles/${source.id}`} key={source.id}>
             <Col lg={3}>
               <Thumbnail className="Article-thumbnail" src={source.urlsToLogos.small} alt="242x200">
                 <h4>{source.name}</h4>
                 <span>{source.description}</span>
               </Thumbnail>
             </Col>
-          </a>
+          </Link>
         )}
       </Row>
       </div>
