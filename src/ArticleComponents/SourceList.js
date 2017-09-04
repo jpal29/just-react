@@ -12,7 +12,7 @@ class SourceList extends Component {
   }
 
   componentDidMount(){
-    fetch('https://newsapi.org/v1/sources?country=us&category=technology')
+    fetch('https://newsapi.org/v1/sources?country=us&category=general')
     .then(res => res.json())
     .then(sources => this.setState({sources: sources.sources}))
   }
@@ -23,7 +23,7 @@ class SourceList extends Component {
       <h1>Sources</h1>
       <Row>
         {this.state.sources.map(source =>
-          <Link to={`/articles/${source.id}`} key={source.id}>
+          <Link to={`/${source.id}/articles`} key={source.id}>
             <Col lg={3}>
               <Thumbnail className="Article-thumbnail" src={source.urlsToLogos.small} alt="242x200">
                 <h4>{source.name}</h4>

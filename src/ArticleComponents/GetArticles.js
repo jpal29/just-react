@@ -6,12 +6,13 @@ class GetArticles extends Component {
   constructor(props){
     super(props);
     this.state = {
-      articles: []
+      articles: [],
+      sourceid: this.props.match.params.sourceid
     }
   }
 
   componentDidMount() {
-    fetch(' https://newsapi.org/v1/articles?source=al-jazeera-english&sortBy=latest&apiKey=c4dfbc715df444bd9e673e5ca0e0f005')
+    fetch('https://newsapi.org/v1/articles?source=' + this.state.sourceid + '&sortBy=latest&apiKey=c4dfbc715df444bd9e673e5ca0e0f005')
     .then(res => res.json())
     .then(articles => this.setState({articles: articles.articles}));
   }
