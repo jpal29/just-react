@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import GetArticles from './GetArticles.js';
+import GetArticles from './ArticleComponents/GetArticles.js';
 
 class App extends Component {
 
