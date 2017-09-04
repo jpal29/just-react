@@ -18,12 +18,16 @@
   font-size: large;
 }
 
-.Article-column {
+.Article-thumbnail {
   min-height: 400px;
 }
 
-.Article-column:hover {
+.Article-thumbnail:hover {
   width: 410px;
+}
+
+h1 {
+  text-align: center;
 }
 
 @keyframes App-logo-spin {

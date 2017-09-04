@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Row, Col, Thumbnail } from 'react-bootstrap';
-import './App.css';
+import '../App.css';
 class GetArticles extends Component {
 
   constructor(props){
     super(props);
     this.state = {
-      articles: [],
-      hovered: false
+      articles: []
     }
   }
 
@@ -27,7 +26,7 @@ class GetArticles extends Component {
           {this.state.articles.map((article, index) =>
             <a href={article.url} key={index}>
               <Col lg={3}>
-                <Thumbnail className="Article-column" src={article.urlToImage} alt="242x200">
+                <Thumbnail className="Article-thumbnail" src={article.urlToImage} alt="242x200">
                   <h4>{article.title}</h4>
                   <span>{article.description}</span>
                 </Thumbnail>
