@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Col, Thumbnail } from 'react-bootstrap';
+import { Row, Col, Thumbnail, Grid } from 'react-bootstrap';
 import '../App.css';
 class GetArticles extends Component {
 
@@ -24,16 +24,20 @@ class GetArticles extends Component {
     return (
       <div>
         <h1>Articles</h1>
-          {this.state.articles.map((article, index) =>
-            <a href={article.url} key={index}>
-              <Col lg={3}>
-                <Thumbnail className="Article-thumbnail" src={article.urlToImage} alt="242x200">
-                  <h4>{article.title}</h4>
-                  <span>{article.description}</span>
-                </Thumbnail>
-              </Col>
-            </a>
-          )}
+        <Grid fluid={true}>
+          <Row className=".Article-row">
+            {this.state.articles.map((article, index) =>
+              <a href={article.url} key={index}>
+                <Col md={3}>
+                  <Thumbnail className="Article-thumbnail" src={article.urlToImage} alt="242x200">
+                    <h4>{article.title}</h4>
+                    <span>{article.description}</span>
+                  </Thumbnail>
+                </Col>
+              </a>
+            )}
+          </Row>
+        </Grid>
       </div>
     )
   }

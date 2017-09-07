@@ -18,13 +18,32 @@
   font-size: large;
 }
 
+.Article-row {
+  height: auto;
+}
+
 .Article-thumbnail {
-  min-height: 400px;
+  height: 400px;
+}
+
+.Article-thumbnail img {
+  height: 50%;
+  width: 100%;
+}
+
+.Article-thumbnail p {
+  height: 10%;
+}
+
+.Article-thumbnail span {
+  height: 40%;
 }
 
 .Article-thumbnail:hover {
   width: 410px;
 }
+
+
 
 h1 {
   text-align: center;
