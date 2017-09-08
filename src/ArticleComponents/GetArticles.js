@@ -31,7 +31,7 @@ class GetArticles extends Component {
                 <Col md={3}>
                   <Thumbnail className="Article-thumbnail" src={article.urlToImage} alt="242x200">
                     <h4>{article.title}</h4>
-                    <span>{article.description}</span>
+                    <p>{article.description}</p>
                   </Thumbnail>
                 </Col>
               </a>
