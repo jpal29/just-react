@@ -22,13 +22,11 @@ class CategoryList extends Component {
   }
 
   render() {
-    const gridStyle = {
-      margin: "20px"
-    };
+
     return(
       <div>
       <h1>News Categories</h1>
-      <Row style={gridStyle}>
+      <Row className="Row-style">
         {this.state.categories.map((category, index) =>
           <Link to={`/${category}`} key={index}>
             <Col lg={3}>
@@ -39,6 +37,7 @@ class CategoryList extends Component {
           </Link>
         )}
       </Row>
+      <footer>Made possible by the services of <a href="https://newsapi.org/">News API</a></footer>
       </div>
     )
   }

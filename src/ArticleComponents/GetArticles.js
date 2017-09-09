@@ -38,6 +38,7 @@ class GetArticles extends Component {
             )}
           </Row>
         </Grid>
+        <footer>Made possible by the services of <a href="https://newsapi.org/">News API</a></footer>
       </div>
     )
   }

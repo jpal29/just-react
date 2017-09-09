@@ -34,6 +34,7 @@ class SourceList extends Component {
           </Link>
         )}
       </Row>
+      <footer>Made possible by the services of <a href="https://newsapi.org/">News API</a></footer>
       </div>
     )
   }
