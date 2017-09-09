@@ -31,16 +31,20 @@
   width: 100%;
 }
 
-.Article-thumbnail p {
+.Article-thumbnail h4 {
   height: 10%;
 }
 
-.Article-thumbnail span {
+.Article-thumbnail p {
   height: 40%;
 }
 
 .Article-thumbnail:hover {
   width: 410px;
+}
+
+.Category-thumbnail:hover {
+  width: 450px;
 }
 
 

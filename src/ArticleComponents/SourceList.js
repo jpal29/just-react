@@ -26,9 +26,9 @@ class SourceList extends Component {
         {this.state.sources.map(source =>
           <Link to={`/${source.category}/${source.id}/articles`} key={source.id}>
             <Col lg={3}>
-              <Thumbnail className="Article-thumbnail" src={source.urlsToLogos.small} alt="242x200">
+              <Thumbnail className="Article-thumbnail" src={source.urlsToLogos.small}>
                 <h4>{source.name}</h4>
-                <span>{source.description}</span>
+                <p>{source.description}</p>
               </Thumbnail>
             </Col>
           </Link>

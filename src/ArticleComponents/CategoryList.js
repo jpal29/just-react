@@ -22,14 +22,17 @@ class CategoryList extends Component {
   }
 
   render() {
+    const gridStyle = {
+      margin: "20px"
+    };
     return(
       <div>
-      <h1>Categories</h1>
-      <Row>
+      <h1>News Categories</h1>
+      <Row style={gridStyle}>
         {this.state.categories.map((category, index) =>
           <Link to={`/${category}`} key={index}>
             <Col lg={3}>
-              <Thumbnail className="Article-thumbnail" alt="242x200">
+              <Thumbnail className="Category-thumbnail" >
                 <h4>{category}</h4>
               </Thumbnail>
             </Col>

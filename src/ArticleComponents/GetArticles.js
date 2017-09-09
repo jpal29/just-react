@@ -25,11 +25,11 @@ class GetArticles extends Component {
       <div>
         <h1>Articles</h1>
         <Grid fluid={true}>
-          <Row className=".Article-row">
+          <Row>
             {this.state.articles.map((article, index) =>
               <a href={article.url} key={index}>
                 <Col md={3}>
-                  <Thumbnail className="Article-thumbnail" src={article.urlToImage} alt="242x200">
+                  <Thumbnail className="Article-thumbnail" src={article.urlToImage}>
                     <h4>{article.title}</h4>
                     <p>{article.description}</p>
                   </Thumbnail>
