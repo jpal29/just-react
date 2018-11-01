@@ -7,6 +7,8 @@ To install the node modules make sure you have the latest version of node.js and
     npm install
 
 To run the app on your localhost
+
+
     npm start
 
 Once you have reached the point where you want to deploy this. You can do 
